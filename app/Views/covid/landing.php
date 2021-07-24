@@ -44,7 +44,7 @@
 			<p>Alamat</p>
 			<input class="form-control" type="text" name="alamat">
 			<p>Pilih Vaksin</p>
-			<select class="form-select">
+			<select class="form-select" name="vaksin">
 				<option value="sinovac">Sinovac</option>
 				<option value="astra-zeneca">Astra Zeneca</option>
 				<option value="sinopharm">Sinopharm</option>
@@ -55,6 +55,9 @@
 			<br>
 			<button class="btn btn-primary" type="submit">Vaksin</button>
 		</form>
+	</div>
+	<div class="rujukan">
+		<h1>Rumah Sakit Rujukan Covid 19</h1><a href="/rujukan">buka</a>
 	</div>
 </body>
 </html>

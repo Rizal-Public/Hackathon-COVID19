@@ -29,6 +29,14 @@ class Covid extends BaseController
 		return view('covid/landing', $data);
 	}
 
+	public function daftar_vaksin()
+	{
+		$db = \Config\Database::connect();
+		$db->query("INSERT INTO data_vaksin (nama,alamat,vaksin)VALUES('".
+			$_POST['nama']."','".$_POST['alamat']."','".$_POST['vaksin']."')");
+		return redirect('/', 'get');
+	}
+
 	function get_url( $url,  $javascript_loop = 0, $timeout = 5 )
 	{
 	    $url = str_replace( "&amp;", "&", urldecode(trim($url)) );
