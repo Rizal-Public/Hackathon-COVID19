@@ -1,0 +1,15 @@
+h1 {
+	text-align: center;
+}
+
+.keterangan .row div {
+	border: thin solid black;
+}
+
+.keterangan .row {
+	margin: 2em 0;
+}
+
+.keterangan .row .judul {
+	text-align: center;
+}

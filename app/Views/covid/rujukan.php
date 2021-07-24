@@ -8,18 +8,19 @@
 </head>
 <body>
 	<div class="rumah-sakit">
+		<h1>Rumah Sakit Rujukan</h1>
 		<?php foreach($api as $rm): ?>
 			<div class="keterangan">
 				<div class="row">
-					<div class="col-md-12"><h2><?= $rm->name ?></h2></div>
-					<div class="col-md-5"><p>address</p></div>
-					<div class="col-md-5"><?= $rm->address ?></div>
-					<div class="col-md-5"><p>region</p></div>
-					<div class="col-md-5"><?= $rm->region ?></div>
-					<div class="col-md-5"><p>phone</p></div>
-					<div class="col-md-5"><?= $rm->phone ?></div>
-					<div class="col-md-5"><p>province</p></div>
-					<div class="col-md-5"><?= $rm->province ?></div>
+					<div class="judul col-md-12"><h2><?= $rm->name ?></h2></div>
+					<div class="col-md-6"><p>address</p></div>
+					<div class="col-md-6"><?= $rm->address ?></div>
+					<div class="col-md-6"><p>region</p></div>
+					<div class="col-md-6"><?= $rm->region ?></div>
+					<div class="col-md-6"><p>phone</p></div>
+					<div class="col-md-6"><?= $rm->phone ?></div>
+					<div class="col-md-6"><p>province</p></div>
+					<div class="col-md-6"><?= $rm->province ?></div>
 				</div>
 			</div>
 		<?php endforeach ?>
