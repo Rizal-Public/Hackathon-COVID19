@@ -130,3 +130,6 @@ db/*
 vendor
 vendor/*
 Rakefile
+.gitignore
+.gitattributes
+catatan.log

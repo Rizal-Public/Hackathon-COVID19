@@ -1,0 +1,50 @@
+.covid-count {
+	width: 100vw;
+	background: rgba(150, 0, 255, .7);
+	box-sizing: border-box;
+	height: 300px;
+	padding: 0 50px;
+	font-family: 'sans-serif';
+}
+
+.covid-count .positif {
+	background: #aaaaaa;
+}
+
+.covid-count .dirawat {
+	background: #00bbbb;
+}
+
+.covid-count .sembuh {
+	background: #0bea0b;
+}
+
+.covid-count .meninggal {
+	background: #f01010;
+}
+
+.covid-count .card {
+	margin: 50px;
+	margin-left: 0;
+	padding: 20px;
+	opacity: 1;
+	text-align: center;
+	border: solid thin black;
+	color: white;
+}
+
+.covid-count .card .card-title {
+	position: relative;
+	margin-top: 40px;
+}
+
+.covid-count .card .card-title::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	width: 90%;
+	height: 1px;
+	border-top: solid 2px white;
+	transform: translateX(-50%);
+	transition: all .2s;
+}
