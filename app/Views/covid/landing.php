@@ -36,5 +36,24 @@
 			</div>
 		</div> 
 	</div>
+	<div class="modul-vaksin">
+		<h2>Vaksinasi</h2>
+		<form method="post">
+			<p>Nama</p>
+			<input class="form-control" type="text" name="nama">
+			<p>Alamat</p>
+			<input class="form-control" type="text" name="alamat">
+			<p>Pilih Vaksin</p>
+			<select>
+				<option value="sinovac">Sinovac</option>
+				<option value="astra-zeneca">Astra Zeneca</option>
+				<option value="sinopharm">Sinopharm</option>
+				<option value="moderna">Moderna</option>
+				<option value="pfizer">Pfizer</option>
+				<option value="novavax">Novavax</option>
+			</select>
+			<button class="btn btn-primary" type="submit">Vaksin</button>
+		</form>
+	</div>
 </body>
 </html>
