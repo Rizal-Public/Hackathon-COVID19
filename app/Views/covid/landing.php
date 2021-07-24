@@ -44,7 +44,7 @@
 			<p>Alamat</p>
 			<input class="form-control" type="text" name="alamat">
 			<p>Pilih Vaksin</p>
-			<select>
+			<select class="form-select">
 				<option value="sinovac">Sinovac</option>
 				<option value="astra-zeneca">Astra Zeneca</option>
 				<option value="sinopharm">Sinopharm</option>
@@ -52,6 +52,7 @@
 				<option value="pfizer">Pfizer</option>
 				<option value="novavax">Novavax</option>
 			</select>
+			<br>
 			<button class="btn btn-primary" type="submit">Vaksin</button>
 		</form>
 	</div>

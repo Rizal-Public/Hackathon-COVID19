@@ -49,3 +49,18 @@
 	transition: all .2s;
 }
 
+.modul-vaksin {
+	margin: 4em;
+	border: thin black solid;
+	border-radius: 1em;
+	padding: 20px;
+}
+
+.modul-vaksin h2 {
+	text-align: center;
+}
+
+.modul-vaksin p {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
