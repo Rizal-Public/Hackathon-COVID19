@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Covid::landing');
 $routes->post('/', 'Covid::daftar_vaksin');
+$routes->get('/rujukan', 'RumahSakit::list');
 
 /*
  * --------------------------------------------------------------------

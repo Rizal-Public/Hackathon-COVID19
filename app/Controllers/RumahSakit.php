@@ -4,33 +4,15 @@ namespace App\Controllers;
 
 require('simple_html_dom.php');
 
-class Covid extends BaseController
+class RumahSakit extends BaseController
 {
-	public function landing()
+	public function list()
 	{
-		$this->response->removeHeader('Cache-Control');
-		header('Last-Modified: '. gmdate('D, d M Y H:i:s') . ' GMT');
-		header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
-		header('Pragma: no-cache');
-		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-
-    $api = $this->get_url('https://api.kawalcorona.com/indonesia');
+		$api = $this->get_url('https://dekontaminasi.com/api/id/covid19/hospitals');
 		$data = [
-			'api' 		=> json_decode($api[0])[0]
+			'api' => decode_json($api);
 		];
-		if(is_null($data['api'])) {
-			$data['api'] = json_decode('{ "positif": "failed", "dirawat": "failed", "sembuh": "failed", "meninggal": "failed" }');
-		}
-
-		return view('covid/landing', $data);
-	}
-
-	public function daftar_vaksin()
-	{
-		$db = \Config\Database::connect();
-		$db->query("INSERT INTO data_vaksin (nama,alamat,vaksin)VALUES('".
-			$_POST['nama']."','".$_POST['alamat']."','".$_POST['vaksin']."')");
-		return redirect('/', 'get');
+		return view('covid/rujukan');
 	}
 
 	function get_url( $url,  $javascript_loop = 0, $timeout = 5 )

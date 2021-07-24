@@ -69,8 +69,11 @@
 .rujukan {
 	background: aqua;
 	display: flex;
-	padding: 1em;
+	padding: 1.3em;
 	border: thin solid black;
+	border-right-style: none;
+	border-left-style: none;
+	margin: 1em 0;
 }
 
 .rujukan a {
@@ -84,5 +87,4 @@
 	height: 3em;
 	font-size: 1.2em;
 	padding: 0.5em 1em;
-	/*margin-left: 100px;*/
 }
