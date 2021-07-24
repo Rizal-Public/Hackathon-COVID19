@@ -10,9 +10,13 @@ class RumahSakit extends BaseController
 	{
 		$api = $this->get_url('https://dekontaminasi.com/api/id/covid19/hospitals');
 		$data = [
-			'api' => decode_json($api);
+			'api' => json_decode($api[0])
 		];
-		return view('covid/rujukan');
+
+		if(is_null($data['api'])) {
+			$data['api'] = json_decode('[{ "name": "null", "address": "null", "region": "null", "phone": "null", "province": "null" }]');
+		}
+		return view('covid/rujukan', $data);
 	}
 
 	function get_url( $url,  $javascript_loop = 0, $timeout = 5 )
